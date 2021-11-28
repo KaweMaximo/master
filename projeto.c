@@ -45,7 +45,7 @@ system("color 1F");
           printf("Excluir Objeto no Banco de Dados\n");
           break;
 
-        default:  // NENHUMA DAS OPÇÃO EM CIMA
+        default:  // NENHUMA DAS OPÇÃO DE CIMAS
           printf("Opção Invalida\n");
     }
 
