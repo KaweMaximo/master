@@ -1,0 +1,8 @@
+COMPILAR NO CMD 
+
+-> ABRA NA PASTA PARA COMPILAR
+OBS: CD PROGRAM FILES/C++
+
+-> DIGITE gcc projeto.c -o projeto.exe
+
+-> EXECUTE projetos.exe

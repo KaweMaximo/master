@@ -1,0 +1,100 @@
+-> O que é uma variável?
+Variável é um local reservado na memória para armazenar um tipo de dado.
+
+Toda variável deve ter um identificador, ou seja um nome.
+
+Além de ter um nome, a variável também precisa ter um tipo.
+
+O tipo de dado de uma variável determina o que ela é capaz de armazenar.
+
+-> Tipos de dados
+Existem diversos tipos de dados que podem ser usados nas variáveis.
+
+Cada tipo de dado é específico para armazenar uma determinado formato de dado.
+
+Podemos dizer que os principais tipos de dados numéricos dividem-se em:
+
+Inteiro: armazena números inteiros
+Real: armazena números com casas decimais, são as variáveis de ponto flutuante;
+O tipo de dado caracter é capaz de representar um caracter ou um conjunto de caracteres (letras, dígitos ou símbolos) .
+
+Tipos de dados mais comuns em linguagem C
+int: armazena valores numéricos inteiros.
+
+char: armazena caracteres.
+
+float: armazena números com ponto flutuante (reais) com precisão simples.
+
+double: armazena números com ponto flutuante, com precisão dupla, ou seja normalmente possui o dobro da capacidade de uma variável do tipo float.
+
+Sintaxe de declarações de variáveis em C
+Em C devemos listar primeiro o tipo, depois o nome da variável.
+
+Sintaxe:
+<tipo> <nome_da_variável>;
+
+Exemplo de declaração de variável do tipo inteiro
+
+int contador;
+
+onde:
+
+int é o tipo da variável (inteiro)
+contador é o nome da variável.
+Declarando uma variável real (ponto flutuante):
+
+float salario;
+
+Declarando uma variável do tipo caracter:
+
+char letra;
+
+Endereço de uma variável
+Toda variável possui um endereço de memória associado a ela. Esse endereço refere-se ao local da memória onde os dados ficam armazenados.
+
+Quando um programa está sendo escrito, não conhecemos o endereço onde a variável será armazenada. Sendo assim, para fazer referência à variável usamos o nome da mesma e o computador se encarrega do resto.
+
+Regras para criação de nomes de variáveis
+Devemos observar algumas regras para criar os identificadores das variáveis.
+
+O nome de uma variável deve sempre iniciar com uma letra ou com _ , jamais deve iniciar com um número.
+
+Exemplo:
+
+float total2; // está correto
+
+float 2total; //está errado, pois não iniciou com uma letra.
+
+Como visto, o nome de uma variável pode conter dígitos em qualquer posição, menos na primeira.
+Utilize nomes representativos
+
+Exemplo:
+
+float salario;
+
+Neste exemplo o nome da variável já diz o que ela vai armazenar.
+ 
+ 
+ 
+Lembre-se que a linguagem C é “case sensitive”, isto é as letras maiúsculas e minúsculas fazem diferença, pois sãos tratadas como caracteres diferentes.
+
+Isso significa que uma variável declarada como Total será diferente de total.
+Comando de atribuição
+Atribuir significa armazenar um valor em uma variável.
+
+Em linguagem C usamos o operador = para fazer uma atribuição.
+
+Exemplo:
+
+X = 10;
+
+Este comando atribui o valor 10 para a variável X.
+
+Para poder atribuir um valor a uma variável, esta tem que ter sido previamente declarada.
+
+
+~~~VARIAVEIS ~~
+
+%s -> char
+%d -> int
+%f -> float
