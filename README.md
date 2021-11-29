@@ -1,2 +1,2 @@
-# master
+# PROJETO DE ADS
 Projeto C
