@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <windows.h>
 
 int numero;
 int solicitar;
-char buf[20];
+int excluir;
 
 int main(int argc, char *argv[])
 {
@@ -33,12 +34,13 @@ pont_arq = fopen("arquvi_palavra.txt", "w");
     printf("O que Deseja Fazer no Aplicativo\n");
     printf("\n-> 1 (Solicitar) Peca\n");
     printf("-> 2 (Gerar) Lista das Compras\n");
-    printf("-> 3 (Alterar) Objeto no Banco de Dados da Loja\n");
+    printf("-> 3 (Incluir) Objeto no Banco de Dados da Loja\n");
     printf("-> 4 (Excluir) Objeto no Banco de Dados da Loja\n");
     printf("\nDigite o Número da sua Escolha: ");
     scanf("%d", &numero);  // ARMAZENAR NUMERO DA "ESCOLHA" DO USUARIO
     system("cls");
 
+    char incluir[50];
     switch(numero)  //ESTRUTURA DE DECISÃO 
     {
         case 1: 
@@ -51,6 +53,7 @@ pont_arq = fopen("arquvi_palavra.txt", "w");
             printf("5 -> BARRA DE FERRO\n");
             printf("-------------------------------\n");
             printf("Qual Peca deseja SOLICITAR: ");
+            printf("\n");
             scanf("%d", &solicitar);
 
             if (solicitar == 1)
@@ -82,20 +85,65 @@ pont_arq = fopen("arquvi_palavra.txt", "w");
             {
               printf("Essa Opcao nao Existe");
             }
-
-            
+         
+            fprintf(pont_arq, "%d", solicitar);
 
             printf("\n");
             system("pause");
             break;
         case 2:
           printf("Gerarando Lista de Compras\n");
+          printf("\n");
+            SetConsoleTitle("Desejar Abrir notepad ?\n"); 
+            system("start arquvi_palavra.txt"); // ABRINDO O ARQUIVO TEXTO NA MAQUINA
           break;
         case 3:
-          printf("Alterar Objeto no Banco de Dados\n");
+          printf("Incluir Objeto no Banco de Dados\n");
+          printf("\n");
+          printf("Escreva qual Ferramenta que Deseja Incluir no Banco de Dados: ");
+          scanf("%s", &incluir);
+          pont_arq = fopen("arquvi_palavra.txt", "at");
+          fprintf(pont_arq, "%s", incluir); // ARMARZENAR A ESCRTIA DO USUARIO NO .TXT
+          fclose(pont_arq);
+          printf("\n");
+          printf("O Objeto foi criado e Listado com sucesso!\n");
+          printf("\n");
+          system("pause");
           break;
         case 4:
           printf("Excluir Objeto no Banco de Dados\n");
+          printf("\n");
+          printf("1 - SIM\n");
+          printf("2 - NAO\n");
+          printf("\n");
+          printf("Deseja Excluir Toda a Lista do Banco de Dados: ");
+          printf("\n");
+
+          scanf("%d", &excluir);
+
+          if (excluir == 1)
+          {
+              pont_arq = fopen("arquvi_palavra.txt", "a");
+              fputs("NULL", pont_arq);
+              fclose(pont_arq);
+              printf("\n");
+              printf("Dados Apagado com Sucesso");
+              printf("\n");
+          }
+
+          if (excluir == 2)
+          {
+            printf("Nenhum Dado Apagado\n");
+
+          }
+
+          if (excluir >2)
+          {
+            printf("Essa Opcao nao Existe");
+
+          }
+
+
           break;
 
         default:  // NENHUMA DAS OPÇÃO DE CIMAS
